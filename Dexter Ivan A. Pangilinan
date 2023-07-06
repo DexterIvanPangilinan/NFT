@@ -1,0 +1,37 @@
+const NFTs = []
+function mintNFT(_name, _size, _color, _number) {
+	
+	const NFT = {
+		"name" : _name,
+		"size" : _size,
+		"color" : _color,
+		"number" : _number
+	}
+	NFTs.push(NFT);
+	console.log("Minted: " + _name);
+}
+
+
+function listNFTs() {
+	for(let i = 0;i<NFTs.length;i++) {
+    
+		console.log("\nname: "+NFTs[i].name);
+		console.log("size: "+NFTs[i].size);
+		console.log("color: "+NFTs[i].color);
+		console.log("number: "+NFTs[i].number);
+    
+	}
+
+}
+
+function getTotalSupply() {
+	console.log("Total Supply: "+NFTs.length);
+}
+
+mintNFT("Pat", "Medium", "Pink", "17");
+mintNFT("Carms", "Small", "Red", "18");
+mintNFT("Zy", "Medium", "Green", "19");
+mintNFT("Dex", "Medium", "Blue", "24");
+listNFTs();
+console.log("\n");
+getTotalSupply();
